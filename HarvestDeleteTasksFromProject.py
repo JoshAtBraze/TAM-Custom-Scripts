@@ -36,10 +36,6 @@ def getAllTAMProjectIDs():
         for item in range(0, len(jsonResponse["projects"])):
             # Parsing out all project Data
             if "TAM Paid Service" in jsonResponse["projects"][item]["name"]:
-                #print(jsonResponse["projects"][item]["name"])
-                #Add the project name and id to the list
-                #TAMProjects.append(jsonResponse["projects"][item]["name"])
-
                 #Add the project IDs to the list of TAM projects
                 TAMProjects.append(jsonResponse["projects"][item]["id"])
         #Increment the page count
@@ -102,11 +98,9 @@ def deleteAllNonTAMTasks(TAMProjectIDList):
             for item in range(0, len(jsonResponse["task_assignments"])):
                 if jsonResponse["task_assignments"][item]["task"]["id"] not in TAMTasksToKeepIDList:
                     #Add bad records to the list
-                    #print(jsonResponse["task_assignments"][item])
                     TAMTaskAssignmentIDsToDelete.append(jsonResponse["task_assignments"][item]["id"])
 
             print("==============")
-            #print(json.dumps(jsonResponse, sort_keys=True, indent=4))
             #increment to the next page if necessary
             taskPageIndex = taskPageIndex + 1
 
