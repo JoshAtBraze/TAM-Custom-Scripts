@@ -14,7 +14,7 @@ def getAllTAMProjectIDs():
         url = "https://api.harvestapp.com/v2/projects?page=" + str(projectPageIndex)
         headers = {
             "User-Agent": "Braze (joshua.collins@braze.com)",
-            "Authorization": "Bearer 2646814.pt.4Pxnh1PNjWk6gX3GyTMUo8nSOQAV_p5h1pBvtFjG_Autb8dTzX6dBWOgu6yWdxYPOJI2G6D3QzNdPajw_w36fg",
+            "Authorization": "READACTED",
             "Harvest-Account-ID": 1049349
         }
 
@@ -55,7 +55,7 @@ def deleteTasks(projectID, listOfAssignments):
         url = "https://api.harvestapp.com/v2/projects/" + str(projectID) + "/task_assignments/" + str(item)
         headers = {
             "User-Agent": "Braze (joshua.collins@braze.com)",
-            "Authorization": "Bearer 2646814.pt.4Pxnh1PNjWk6gX3GyTMUo8nSOQAV_p5h1pBvtFjG_Autb8dTzX6dBWOgu6yWdxYPOJI2G6D3QzNdPajw_w36fg",
+            "Authorization": "REDACTED",
             "Harvest-Account-ID": 1049349
         }
 
@@ -87,7 +87,7 @@ def deleteAllNonTAMTasks(TAMProjectIDList):
             url = "https://api.harvestapp.com/v2/projects/" + str(currentProjectID) + "/task_assignments"
             headers = {
                 "User-Agent": "Braze (joshua.collins@braze.com)",
-                "Authorization": "Bearer 2646814.pt.4Pxnh1PNjWk6gX3GyTMUo8nSOQAV_p5h1pBvtFjG_Autb8dTzX6dBWOgu6yWdxYPOJI2G6D3QzNdPajw_w36fg",
+                "Authorization": "REDACTED",
                 "Harvest-Account-ID": 1049349
             }
 
